@@ -9,6 +9,7 @@ tags: [vulnerability, OWASP, injection, security]
 
 ## 🛡️ The Digital Weak Spots: Introduction to Web Vulnerabilities
 
+![web security example](/assets/web.webp){: width="600"}
 In today's digital landscape, web applications are the primary gateway for businesses and users. But just like a physical building, they can have weak spots. These "weak spots" are what we call **web vulnerabilities**. Understanding them is the first step toward building a robust defense.
 
 A web vulnerability is essentially a **flaw or weakness in a web application, its operating system, or its management system** that an attacker can exploit to gain unauthorized access, steal data, or cause disruption.

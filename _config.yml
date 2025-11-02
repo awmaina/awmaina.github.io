@@ -22,7 +22,7 @@ description: "I am an adaptable cybersecurity professional with a comprehensive 
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: https://awmaina.github.io
+url: "https://awmaina.github.io"
 
 github:
   username: awmaina # change to your GitHub username

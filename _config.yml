@@ -1,3 +1,4 @@
+
 # The Site Configuration
 
 # Import the theme
@@ -9,37 +10,40 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone: Africa/Nairobi # Added a placeholder timezone (You should confirm this is correct)
+timezone:
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: "Alex Weru" # the main title
+title: Alex Weru # the main title
 
-tagline: Junior SOC Analyst | Pentester| Information Security & Forensics | Network Administrator # it will display as the subtitle
+tagline: A text-focused Jekyll theme # it will display as the subtitle
 
-description: "I am an adaptable cybersecurity professional with a comprehensive background spanning Network Administration to advanced Information Security & Forensics. As a Junior SOC Analyst and Pentester, I leverage both defensive monitoring and offensive testing skills to ensure robust digital security".
+description: >- # used by seo meta and the atom feed
+  A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://awmaina.github.io"
+url: ""
 
 github:
-  username: awmaina # change to your GitHub username
+  username: github_username # change to your GitHub username
 
 twitter:
-  username: twitter_awmaina # Placeholder: Change to your Twitter username
+  username: twitter_username # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Alex Maina Weru
-  email: mainaweru2023@gmail.com # change to your email address
+  name: your_full_name
+  email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # **CORRECTION APPLIED HERE:** Uncommented and formatted the links as a YAML list
-    - https://github.com/awmaina # change to your GitHub homepage
-    - https://www.linkedin.com/in/alexmainaweru # added LinkedIn link
+    - https://twitter.com/username # change to your Twitter homepage
+    - https://github.com/username # change to your GitHub homepage
+    # Uncomment below to add more social links
+    # - https://www.facebook.com/username
+    # - https://www.linkedin.com/in/username
 
 # Site Verification Settings
 webmaster_verifications:
@@ -140,7 +144,7 @@ pwa:
     enabled: true # The option for PWA offline cache
     # Paths defined here will be excluded from the PWA cache.
     # Usually its value is the `baseurl` of another website that
-    # shares the same domain name as the current website.<
+    # shares the same domain name as the current website.
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 

@@ -1,7 +1,6 @@
 ---
-layout: page # or post, default, etc. depending on your theme
-title: "Resume"
-permalink: /resume/
+layout: resume
+icon: fas fa-id-card
+order: 5
 ---
 
-# The rest of your resume content...

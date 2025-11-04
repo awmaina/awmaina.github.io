@@ -12,7 +12,7 @@ order: 5
 - **Name:** ALEX MAINA WERU  
 - **Phone:** 0745306185  
 - **Email:** mainaweru2023@gmail.com  
-- **LinkedIn:** [www.linkedin.com/in/alex-weru-1b4b70340](https://www.linkedin.com/in/alex-weru-1b4b70340)
+- **LinkedIn:** [www.linkedin.com/in/alexmainaweru](https://www.linkedin.com/in/alexmainaweru)
 
 ---
 
@@ -47,19 +47,16 @@ Applied Computing student with strong technical skills in **cybersecurity**, **d
 **Kanjuri High School**, Nyeri, Kenya  
 *January 2018 – December 2021*
 
-### **K.C.P.E**  
-**Kiamigwi Primary School**, Karatina  
-*January 2010 – December 2017*
 
 ---
 
 ## 💻 Training / Courses
 
 - **Network Technician Certification**  
-  *Cisco Networking Academy | March 2025 - Present*
+  *Cisco Networking Academy | september 2025 - Present*
   
 - **Ethical Hacking Certification**  
-  *Cisco Networking Academy | March 2025 - Present*
+  *Cybershujaa Academy | septmber 2025 - Present*
 
 ---
 

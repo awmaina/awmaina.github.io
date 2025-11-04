@@ -153,16 +153,16 @@ Comprehensive test cases were defined to verify:
 ### 🧩 3. Lecturer Dashboard
 ![Lecturer Dashboard](/assets/Screenshot from 2025-11-03 15-57-36.png)
 
-### 🧩 4. Attendance Marking Page
+### 🧩 4. Admin Homepage
 ![Attendance Marking Page](/assets/Screenshot from 2025-11-03 15-58-00.png)
 
-### 🧩 5. Attendance Report
+### 🧩 5. Taking Attendance
 ![Attendance Report](/assets/Screenshot from 2025-11-03 15-58-29.png)
 
-### 🧩 6. Student Attendance Summary
+### 🧩 6. Student Report
 ![Student Attendance Summary](/assets/Screenshot from 2025-11-03 15-58-47.png)
 
-### 🧩 7. System Settings
+### 🧩 7. Attendance Taken Successfully
 ![System Settings](/assets/Screenshot from 2025-11-03 15-59-20.png)
 
 

@@ -145,25 +145,25 @@ Comprehensive test cases were defined to verify:
 - **Security:** Testing access controls between different user roles
 
 
-![Admin Dashboard](Screenshot%20from%202025-11-03%2015-51-16.png)
+![Admin Dashboard](/assets/Screenshot from 2025-11-03 15-51-16.png)
 
 ### 🧩 2. Login Page
-![Login Page](Screenshot%20from%202025-11-03%2015-55-45.png)
+![Login Page](/assets/Screenshot from 2025-11-03 15-55-45.png)
 
 ### 🧩 3. Lecturer Dashboard
-![Lecturer Dashboard](Screenshot%20from%202025-11-03%2015-57-36.png)
+![Lecturer Dashboard](/assets/Screenshot from 2025-11-03 15-57-36.png)
 
 ### 🧩 4. Attendance Marking Page
-![Attendance Marking Page](Screenshot%20from%202025-11-03%2015-58-00.png)
+![Attendance Marking Page](/assets/Screenshot from 2025-11-03 15-58-00.png)
 
 ### 🧩 5. Attendance Report
-![Attendance Report](Screenshot%20from%202025-11-03%2015-58-29.png)
+![Attendance Report](/assets/Screenshot from 2025-11-03 15-58-29.png)
 
 ### 🧩 6. Student Attendance Summary
-![Student Attendance Summary](Screenshot%20from%202025-11-03%2015-58-47.png)
+![Student Attendance Summary](/assets/Screenshot from 2025-11-03 15-58-47.png)
 
 ### 🧩 7. System Settings
-![System Settings](Screenshot%20from%202025-11-03%2015-59-20.png)
+![System Settings](/assets/Screenshot from 2025-11-03 15-59-20.png)
 
 
 ---

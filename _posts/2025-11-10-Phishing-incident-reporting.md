@@ -1,5 +1,10 @@
-# 🛡️ Incident Report: Phishing Attempt via Inbound Email
-
+---
+layout: post
+title: " 🛡️ Incident Report: Phishing Attempt via Inbound Email"
+author: Alex Maina Weru
+date: 2025-11-10 
+categories: [Cybersecurity, SOC Analyst]
+tags: [ SOC, phishing]
 ---
 
 ## 1. Alert Triage and Classification

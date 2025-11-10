@@ -1,10 +1,10 @@
 ---
 layout: post
-title: " 🛡️ Incident Report: Phishing Attempt via Inbound Email"
+title: "🛡️ Incident Report: Phishing Attempt via Inbound Email"
 author: Alex Maina Weru
-date: 2025-11-10 
+date: 2025-11-10
 categories: [Cybersecurity, SOC Analyst]
-tags: [ SOC, phishing]
+tags: [SOC, phishing]
 ---
 
 ## 1. Alert Triage and Classification
@@ -64,41 +64,4 @@ The email uses multiple definitive indicators of a phishing attempt:
   Other employees might have received similar emails, necessitating a review of email gateway filters.  
 
 - **Need for Secondary Review:**  
-  The shortened URL requires secure detonation and analysis by the L2/L3 security team to identify and block the final malicious destination.
-
----
-
-## 3. Remediation and Containment Actions
-
-### 3.1 Recommended Remediation Actions (Checklist)
-
-| Action | Status | Rationale/Detail |
-|--------|--------|------------------|
-| **Block the Sender** | ✅ Complete | Added sender (`urgents@amazon.biz`) and domain (`amazon.biz`) to blocklist. |
-| **Containment** | ✅ Complete | Quarantined/deleted the phishing email from the recipient’s mailbox. |
-| **User Education** | ✅ Complete | Notified recipient not to click links or reply. |
-| **Link Investigation** | ⚠️ Pending/L2 | Forwarded the bit.ly link for sandbox detonation and analysis. |
-
----
-
-### 3.2 Further Investigation / Next Steps
-
-- Verify sandbox results to determine the **final phishing page** and capture **IOCs**.  
-- Perform a **mail log search** to identify if other employees received the same email.  
-- If any users **clicked the link**, execute the **Credential Compromise Playbook** (password resets, session invalidation, endpoint scanning).
-
----
-
-## 4. Closure
-
-**Rationale for Closure:**  
-Initial triage and containment steps are complete.  
-The malicious email has been **removed from the recipient's inbox**, and the sender is **blocked at the email gateway**.  
-The incident is considered **contained**, pending the completion of advanced link analysis and user activity review.
-
----
-
-**Report Prepared by:** SOC Analyst  
-**Date:** Nov 10th, 2025  
-**Status:** ⏳ Contained / Awaiting Final Link Analysis
-
+  The shortened URL requires secure detonation and analysis by the L2/L3 security team to identify and block the final malicious dest

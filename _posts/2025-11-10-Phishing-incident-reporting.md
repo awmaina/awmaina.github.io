@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "🛡️ Incident Report: Phishing Attempt via Inbound Email"
-author: Alex Maina Weru
-date: 2025-11-10
-categories: [Cybersecurity, SOC Analyst]
-tags: [SOC, phishing]
+author: "Alex Maina Weru"
+date: 2025-11-10 15:04:00 +03:00
+categories: ["Cybersecurity", "SOC Analyst"]
+tags: ["SOC", "phishing"]
 ---
 
 ## 1. Alert Triage and Classification
@@ -32,7 +32,7 @@ Initial investigation confirmed the email is a **malicious attempt to steal cred
 | **Recipient (Affected Entity)** | h.harris@thetrydaily.thm |
 | **Sender** | urgents@amazon.biz |
 | **Subject** | Your Amazon Package Couldn't Be Delivered - Action Required |
-| **Malicious URL** | [http://bit.ly/3sHkX3da12340](http://bit.ly/3sHkX3da12340) |
+| **Malicious URL** | http://bit.ly/3sHkX3da12340 |
 | **Direction** | Inbound |
 
 ---
@@ -64,4 +64,17 @@ The email uses multiple definitive indicators of a phishing attempt:
   Other employees might have received similar emails, necessitating a review of email gateway filters.  
 
 - **Need for Secondary Review:**  
-  The shortened URL requires secure detonation and analysis by the L2/L3 security team to identify and block the final malicious dest
+  The shortened URL requires secure detonation and analysis by the L2/L3 security team to identify and block the final malicious destination.
+
+---
+
+## 3. Remediation and Containment Actions
+
+### 3.1 Recommended Remediation Actions (Checklist)
+
+| Action | Status | Rationale/Detail |
+|--------|--------|------------------|
+| **Block the Sender** | ✅ Complete | Added sender (`urgents@amazon.biz`) and domain (`amazon.biz`) to blocklist. |
+| **Containment** | ✅ Complete | Quarantined/deleted the phishing email from the recipient’s mailbox. |
+| **User Education** | ✅ Complete | Notified the recipient not to click links or reply. |
+| **Link Investigation** | ⚠️ Pending/L2 | Forwarded the bit.ly link for sandbox detonation

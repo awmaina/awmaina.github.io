@@ -6,7 +6,8 @@ date: 2025-11-10 15:04:00 +03:00
 categories: ["Cybersecurity", "SOC Analyst"]
 tags: ["SOC", "phishing"]
 ---
-
+<div style="overflow: auto;">
+  <div style="float: left; width: 55%; padding-right: 20px; box-sizing: border-box;">
 ## 1. Alert Triage and Classification
 
 **Incident ID:** 8815  
@@ -15,7 +16,12 @@ tags: ["SOC", "phishing"]
 **Date and Time Detected:** Nov 10th, 2025 at 15:04  
 
 ---
-
+</div>
+<div style="float: right; width: 45%; box-sizing: border-box;">
+    ![Incident Report Snippet](/assets/Screenshot-from-2025-11-03-15-59-36.png)
+  </div>
+</div>
+<div style="clear: both;"></div>
 ### 1.1 Summary of Alert
 
 The alert was triggered by an inbound email containing a suspicious external link.  

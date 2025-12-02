@@ -18,7 +18,7 @@ tags: ["SOC", "phishing"]
 ---
 </div>
 <div style="float: right; width: 45%; box-sizing: border-box;">
-    ![Incident Report Snippet](/assets/Screenshot-from-2025-11-03-15-59-36.png)
+    ![Incident Report Snippet](/assets/avatar.jpeg)
   </div>
 </div>
 <div style="clear: both;"></div>

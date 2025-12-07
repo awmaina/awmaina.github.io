@@ -5,6 +5,9 @@ author: Alex Maina Weru
 date: 2025-11-03
 categories: [Core Technical Project, SAMS]
 tags: [attendance, student, management]
+image:
+  path: assets/sams.png
+  alt: sams
 ---
 
 # 💻 Student Attendance Management System (SAMS) - Detailed Final Report

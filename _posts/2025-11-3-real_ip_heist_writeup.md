@@ -5,6 +5,9 @@ author: Alex Maina Weru
 date: 2025-11-03
 categories: [Lab and CTF challenges]
 tags: [ctf, htb, tryhackme, labs]
+image:
+  path: assets/web.webp
+  alt: Blog-as-Code
 ---
 
 # Real IP Heist — Writeup

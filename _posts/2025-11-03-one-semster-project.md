@@ -7,7 +7,7 @@ categories: [Core Technical Project, SAMS]
 tags: [attendance, student, management]
 image:
   path: assets/sams.png
-  alt: sams
+  alt: samss
 ---
 
 # 💻 Student Attendance Management System (SAMS) - Detailed Final Report

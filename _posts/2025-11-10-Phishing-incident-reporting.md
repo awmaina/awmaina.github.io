@@ -6,8 +6,8 @@ date: 2025-11-10 15:04:00 +03:00
 categories: ["Cybersecurity", "SOC Analyst"]
 tags: ["SOC", "phishing"]
 image:
-  path: assets/avatar.jpeg
-  alt: Blog-as-Code
+  path: assets/phishing.jpg
+  alt: Phishing
 ---
 
 ## 1. Alert Triage and Classification

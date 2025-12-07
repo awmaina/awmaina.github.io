@@ -6,8 +6,8 @@ date: 2025-11-02
 categories: [Cybersecurity, Web Security]
 tags: [vulnerability, OWASP, injection, security]
 image:
-      path:assets/Screenshot at 2025-12-07 17-06-30.png
-      alt:web vuln
+  path: assets/Screenshot at 2025-12-07 17-06-30.png
+  alt: web_vuln
     
 ---
 

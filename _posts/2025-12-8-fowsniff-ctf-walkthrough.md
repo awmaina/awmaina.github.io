@@ -1,4 +1,14 @@
-This is a step-by-step walkthrough for the FOWSNIFF CTF challenge, converted into a clean, easy-to-read Markdown format.
+---
+layout: post
+title: "fowsniff challenge"
+author: Alex Maina Weru
+date: 2025-12-08
+categories: [Lab and CTF challenges]
+tags: [ctf, htb, tryhackme, labs]
+image:
+  path: assets/web.webp
+  alt: Blog-as-Code
+---
 
 ## 🎯 FOWSNIFF CTF Walkthrough
 

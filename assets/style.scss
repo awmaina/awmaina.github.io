@@ -1,0 +1,40 @@
+---
+---
+@import "main";
+
+/* --- TERMINAL THEME OVERRIDES --- */
+
+:root {
+  /* Classic Matrix/Terminal Green */
+  --link-color: #00ff41; 
+  --main-wrapper-bg: #0d0d0d; /* Pure black background */
+  --sidebar-bg: #050505;
+  --topbar-wrapper-bg: #0d0d0d;
+  
+  /* Text Colors */
+  --text-color: #d1d1d1;
+  --heading-color: #00ff41;
+  
+  /* Fonts - Using Monospace for that 'Code' feel */
+  --main-font-family: 'Courier New', Courier, monospace;
+}
+
+/* Add a slight 'glow' effect to links and headings */
+a, h1, h2, h3 {
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+}
+
+/* Style code blocks to look like a terminal prompt */
+.highlight {
+  border: 1px solid #00ff41;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
+}
+
+/* Customize the scrollbar for the hacker look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border-radius: 5px;
+}

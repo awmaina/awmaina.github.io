@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Certifications
-order: 5
+order: 6
 ---
 
 ### Technical Certifications

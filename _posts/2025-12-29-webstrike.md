@@ -17,7 +17,7 @@ tags: [soc, cyberdefender, labs]
 **Wireshark**
 
 ## MITRE ATT&CK Tactics Observed
-- Initial Access  
+- Initial access  
 - Execution  
 - Persistence  
 - Command and Control (C2)  

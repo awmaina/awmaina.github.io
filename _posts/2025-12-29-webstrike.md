@@ -51,6 +51,11 @@ Identify the geographic origin of the attacker to support threat intelligence an
 4. Identify the suspicious source IP:
 - **Attacker IP:** `117.11.88.124`
 - **Victim Server IP:** `24.49.63.79`
+
+
+![](/assets/web/web1.png)
+
+
 5. Use an external IP geolocation service (outside the lab environment) to locate the source IP.
 
 ### Findings
@@ -58,6 +63,8 @@ Using `ipgeolocation.io`, the IP address `117.11.88.124` was traced to:
 
 - **City:** Tianjin  
 - **Country:** China  
+
+![](/assets/web/web2.png)
 
 ### Conclusion
 The attack originated from **Tianjin City**, enabling defenders to consider geo-blocking and correlate this activity with known threat intelligence.
@@ -73,6 +80,8 @@ Identify the attacker’s User-Agent string to support detection and filtering r
 1. Apply the Wireshark display filter: http.request.method == GET
 2. Select an HTTP GET request originating from the attacker.
 3. Expand: Hypertext Transfer Protocol → User-Agent
+
+![](/assets/web/web3.png)
 
 
 ### Findings
@@ -98,6 +107,10 @@ Determine whether a vulnerability was exploited and identify the malicious web s
 ### Findings
 - **First upload attempt:**  
 - Rejected due to *Invalid file format* error.
+
+![](/assets/web/web4.png)
+
+  
 - **Second upload attempt:**  
 - Filename modified to bypass validation:
  ```
@@ -107,6 +120,9 @@ Determine whether a vulnerability was exploited and identify the malicious web s
  ```
  File uploaded successfully
  ```
+
+![](/assets/web/web5.png)
+
 
 ### Conclusion
 The attacker successfully uploaded a malicious web shell named:
@@ -125,6 +141,10 @@ Identify where uploaded files are stored on the server to assist remediation.
 ### Methodology
 - Inspect HTTP POST requests associated with the successful upload.
 - Review paths referenced in HTTP responses and execution requests.
+
+  ![](/assets/web/web6.png)
+
+  
 
 ### Findings
 Uploaded files were stored in the directory:
@@ -146,6 +166,10 @@ Identify the port used by the attacker for outbound communication via the web sh
 2. Analyze the embedded malicious code.
 3. Inspect outbound connections initiated by the server.
 
+
+![](/assets/web/web7.png)
+
+
 ### Findings
 The malicious web shell attempted to establish a reverse connection to the attacker on:
 Port 8080
@@ -165,6 +189,11 @@ Determine what data the attacker attempted to exfiltrate.
 1. Apply the filter: (tcp.port == 8080) && (ip.src == 24.49.63.79)
 2. Follow the TCP stream related to outbound traffic.
 3. Inspect command execution within the reverse shell session.
+
+
+![](/assets/web/web8.png)
+
+
 
 ### Findings
 The attacker executed the following command:

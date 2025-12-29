@@ -5,7 +5,9 @@ author: Alex Maina Weru
 date: 2025-12-29
 categories: [Lab and CTF challenges, Network Forensic]
 tags: [soc, cyberdefender, labs]
-
+image:
+  path: assets/web/web9.png
+  alt: web
 ---
 
 # WEBSTRIKE LAB – Network Forensics Analysis Using Wireshark

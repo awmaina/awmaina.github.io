@@ -9,7 +9,7 @@ order: 6
 
 * **Cisco Ethical Hacker** (2025)
   
-  ![](assets/cert0.png)
+  ![](assets/kali1.png)
 
   
 * **Cisco Endpoint Security**(2025)

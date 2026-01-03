@@ -1,13 +1,19 @@
 ---
 layout: page
 title: Certifications
+icon: fas fa-certificate
 order: 6
 ---
 
 ### Technical Certifications
 
-* **CompTIA Security+** (2023)
-* **eJPT (eLearnSecurity Junior Penetration Tester)**
-* **Cisco Certified Network Associate (CCNA)**
+* **Cisco Ethical Hacker** (2025)
+  
+  ![](assets/cert.png)
+
+  
+* **Cisco Endpoint Security**(2025)
+
+  ![](assets/cert1.png)  
 
 > Tip: You can also link the digital badges directly to the names above!

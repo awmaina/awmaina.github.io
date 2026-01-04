@@ -2,7 +2,7 @@
 layout: post
 title: "Yellow RAT Lab"
 author: Alex Maina Weru
-date: 2025-01-04
+date: 2026-01-04
 categories: [Lab and CTF challenges, Threat Intel]
 tags: [threat-intel, cyberdefender, labs]
 image:

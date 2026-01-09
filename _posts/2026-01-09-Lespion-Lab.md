@@ -6,7 +6,7 @@ date: 2026-01-09
 categories: [Lab and CTF challenges, Threat Intel]
 tags: [threat-intel, cyberdefender, labs]
 image:
-  path: assets/les/les10.webp
+  path: assets/les/Les10.webp
   alt: lespion
 ---
 

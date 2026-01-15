@@ -47,10 +47,10 @@ What is the **SHA-256 hash** of the trading application primarily used by the vi
   - Package name (bundle ID)
   - Cryptographic hashes (SHA-256)
  
-![]{assets/crime/crime1.png}
+![](assets/crime/crime1.png)
 
 
-![]{assets/crime/crime2.png}
+![](assets/crime/crime2.png)
 
 ### Findings
 - **Application Name:** Olymp Trade
@@ -75,7 +75,7 @@ How much money does the victim owe the individual who repeatedly contacted him?
 - Messages demanding repayment were identified and reviewed.
 - Financial values mentioned in conversations were cross-referenced.
 
-![]{assets/crime/crime3.png}
+![](assets/crime/crime3.png)
 
 ### Findings
 The extracted SMS conversations revealed repeated requests for repayment.
@@ -97,7 +97,7 @@ What is the name of the person to whom the victim owes money?
 - The phone number identified from SMS messages and call logs was correlated with:
   - The contacts database extracted via ALEAPP
 
-![]{assets/crime/crime4.png}
+![](assets/crime/crime4.png)
 
 
 ### Findings
@@ -120,9 +120,9 @@ Where was the victim located when he left his residence without informing anyone
   - System logs
 - Google Maps usage at **23:50:29** on September 20, 2023, provided a critical clue.
 
-![]{assets/crime/crime5.png}
+![](assets/crime/crime5.png)
 
-![]{assets/crime/crime6.png}
+![](assets/crime/crime6.png)
 
 
 ### Findings
@@ -147,9 +147,9 @@ Where did the victim intend to travel after his hotel stay?
   - Reservation screenshots
 - Travel-related artifacts were identified within the phone’s media directories.
 
-![]{assets/crime/crime7.png}
+![](assets/crime/crime7.png)
 
-![]{assets/crime/crime8.png}
+![](assets/crime/crime8.png)
 
 ### Findings
 The device contained evidence indicating the victim had plans to travel after his 10-day hotel stay.  
@@ -168,7 +168,7 @@ Where was the victim supposed to meet a friend according to Discord conversation
   - Location mentions
   - Meeting arrangements
 
-![]{assets/crime/crime9.png}
+![](assets/crime/crime9.png)
 
 ### Findings
 The victim arranged to meet a friend at:

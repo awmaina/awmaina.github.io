@@ -5,7 +5,9 @@ author: Alex Maina Weru
 date: 2026-01-19
 categories: [Lab and CTF Challenge, Threat Intel]
 tags: [RedLine Stealer, Trojan, VirusTotal, MalwareBazaar, C2, MITRE ATT&CK]
-
+image: 
+     path: /assets/red/red10.webp
+     alt: red
 ---
 
 # Red Stealer Lab – Threat Intelligence Analysis

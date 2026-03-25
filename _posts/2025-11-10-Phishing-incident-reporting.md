@@ -10,6 +10,9 @@ image:
   alt: Phishing
 ---
 
+{% include embed/video.html src='/assets/video/output.mp4' title='Video Title' %}
+
+
 ## 1. Alert Triage and Classification
 
 **Incident ID:** 8815  

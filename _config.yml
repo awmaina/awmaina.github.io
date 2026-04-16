@@ -33,17 +33,12 @@ twitter:
   username: twitter_username # change to your Twitter username
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Alex Maina Weru
-  email: mainaweru2023@gmail.com # change to your email address
+  name: Alex Weru
+  email: mainaweru2023@gmail.com
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/awmaina # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://github.com/awmaina
+    - https://www.linkedin.com/in/alex-weru-your-handle # IMPORTANT: Add LinkedIn!
+    - https://twitter.com/your_handle
 
 # Site Verification Settings
 webmaster_verifications:

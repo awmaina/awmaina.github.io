@@ -1,40 +1,367 @@
----
----
-@import "main";
+/*
+  chirpy-custom.scss
+  ==================
+  Drop this file into: assets/css/
+  Then import it at the bottom of assets/css/jekyll-theme-chirpy.scss
+  by adding: @import "chirpy-custom";
 
-/* --- TERMINAL THEME OVERRIDES --- */
+  Or paste directly at the bottom of jekyll-theme-chirpy.scss.
 
+  Tested against Chirpy v6.x / v7.x
+*/
+
+/* ─────────────────────────────────────────────
+   1. DESIGN TOKENS
+   ───────────────────────────────────────────── */
 :root {
-  /* Classic Matrix/Terminal Green */
-  --link-color: #00ff41; 
-  --main-wrapper-bg: #0d0d0d; /* Pure black background */
-  --sidebar-bg: #050505;
-  --topbar-wrapper-bg: #0d0d0d;
-  
-  /* Text Colors */
-  --text-color: #d1d1d1;
-  --heading-color: #00ff41;
-  
-  /* Fonts - Using Monospace for that 'Code' feel */
-  --main-font-family: 'Courier New', Courier, monospace;
+  --c-accent:       #378ADD;
+  --c-accent-soft:  #E6F1FB;
+  --c-accent-text:  #0C447C;
+
+  --c-pink:         #D4537E;
+  --c-pink-soft:    #FBEAF0;
+  --c-amber:        #BA7517;
+  --c-amber-soft:   #FAEEDA;
+  --c-teal:         #1D9E75;
+  --c-teal-soft:    #E1F5EE;
+  --c-blue:         #378ADD;
+  --c-blue-soft:    #E6F1FB;
+
+  --radius-sm:      6px;
+  --radius-md:      10px;
+  --radius-lg:      14px;
+
+  --sidebar-bg:     #ffffff;
+  --sidebar-border: rgba(0,0,0,0.08);
+  --card-bg:        #ffffff;
+  --card-border:    rgba(0,0,0,0.07);
+  --tag-bg:         #f3f4f6;
+  --tag-text:       #555;
+  --body-bg:        #f5f5f3;
+  --text-primary:   #1a1a1a;
+  --text-muted:     #6b7280;
+  --text-faint:     #9ca3af;
 }
 
-/* Add a slight 'glow' effect to links and headings */
-a, h1, h2, h3 {
-  text-shadow: 0 0 5px rgba(0, 255, 65, 0.2);
+[data-mode="dark"] {
+  --sidebar-bg:     #1a1a1f;
+  --sidebar-border: rgba(255,255,255,0.07);
+  --card-bg:        #22222a;
+  --card-border:    rgba(255,255,255,0.06);
+  --tag-bg:         #2a2a35;
+  --tag-text:       #a0a0b8;
+  --body-bg:        #16161c;
+  --text-primary:   #e8e8f0;
+  --text-muted:     #8888aa;
+  --text-faint:     #55556a;
+  --c-accent-soft:  #0c2040;
+  --c-accent-text:  #7ab8ef;
 }
 
-/* Style code blocks to look like a terminal prompt */
-.highlight {
-  border: 1px solid #00ff41;
-  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
+
+/* ─────────────────────────────────────────────
+   2. GLOBAL PAGE BACKGROUND
+   ───────────────────────────────────────────── */
+body {
+  background: var(--body-bg) !important;
 }
 
-/* Customize the scrollbar for the hacker look */
-::-webkit-scrollbar {
-  width: 8px;
+
+/* ─────────────────────────────────────────────
+   3. SIDEBAR
+   ───────────────────────────────────────────── */
+#sidebar {
+  background: var(--sidebar-bg) !important;
+  border-right: 0.5px solid var(--sidebar-border) !important;
+  box-shadow: none !important;
 }
-::-webkit-scrollbar-thumb {
-  background: #00ff41;
-  border-radius: 5px;
+
+/* Profile name */
+#sidebar .site-title a,
+#sidebar .site-title {
+  color: var(--text-primary) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
 }
+
+/* Tagline / subtitle */
+#sidebar .site-subtitle {
+  color: var(--text-muted) !important;
+  font-size: 12px !important;
+  line-height: 1.6;
+}
+
+/* Nav links */
+#sidebar nav ul li a,
+#sidebar .nav-link {
+  color: var(--text-muted) !important;
+  font-size: 13px !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 6px 12px !important;
+  transition: background 0.15s, color 0.15s;
+}
+
+#sidebar nav ul li a:hover,
+#sidebar .nav-link:hover {
+  background: var(--tag-bg) !important;
+  color: var(--text-primary) !important;
+}
+
+#sidebar nav ul li.active > a,
+#sidebar .nav-link.active {
+  background: var(--c-accent-soft) !important;
+  color: var(--c-accent-text) !important;
+  font-weight: 500 !important;
+}
+
+/* Sidebar footer icons */
+#sidebar .sidebar-bottom a {
+  color: var(--text-faint) !important;
+  transition: color 0.15s;
+}
+#sidebar .sidebar-bottom a:hover {
+  color: var(--c-accent) !important;
+}
+
+
+/* ─────────────────────────────────────────────
+   4. POST / ARTICLE CARDS (home feed)
+   ───────────────────────────────────────────── */
+
+/* Remove old thumbnail panel style */
+.post-preview,
+article.card,
+.card-wrapper {
+  background: var(--card-bg) !important;
+  border: 0.5px solid var(--card-border) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s, transform 0.15s !important;
+  overflow: hidden;
+}
+
+.post-preview:hover,
+article.card:hover,
+.card-wrapper:hover {
+  border-color: rgba(55, 138, 221, 0.35) !important;
+  transform: translateY(-1px);
+}
+
+/* Left accent bar — color by category using data attributes or :nth-child */
+.post-preview::before,
+article.card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  border-radius: 3px 0 0 3px;
+  background: var(--c-accent);
+}
+
+.post-preview,
+article.card {
+  position: relative;
+  padding-left: 20px !important;
+}
+
+/* Alternate accent colors for visual variety */
+.post-preview:nth-child(4n+1)::before { background: var(--c-pink); }
+.post-preview:nth-child(4n+2)::before { background: var(--c-amber); }
+.post-preview:nth-child(4n+3)::before { background: var(--c-teal); }
+.post-preview:nth-child(4n+0)::before { background: var(--c-blue); }
+
+/* Post title in card */
+.post-preview .card-title,
+.post-preview h1, .post-preview h2,
+article.card .card-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 4px;
+}
+
+/* Post excerpt */
+.post-preview .card-text,
+.post-preview p {
+  font-size: 12.5px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.55;
+}
+
+/* Hide the large colorful thumbnail panels */
+.post-preview .preview-img,
+.card-wrapper .preview-img,
+.post-thumb {
+  display: none !important;
+}
+
+
+/* ─────────────────────────────────────────────
+   5. TAGS & CATEGORY PILLS
+   ───────────────────────────────────────────── */
+
+/* Generic tag reset */
+.post-tag,
+.post-meta .tag,
+a.post-tag {
+  background: var(--tag-bg) !important;
+  color: var(--tag-text) !important;
+  border: none !important;
+  border-radius: var(--radius-sm) !important;
+  font-size: 10.5px !important;
+  font-weight: 500 !important;
+  padding: 2px 8px !important;
+  transition: background 0.15s;
+}
+
+a.post-tag:hover {
+  background: var(--c-accent-soft) !important;
+  color: var(--c-accent-text) !important;
+}
+
+/* Trending tags in sidebar */
+#panel-wrapper .post-tag,
+.trending-tags .post-tag {
+  background: var(--tag-bg) !important;
+  color: var(--tag-text) !important;
+  font-size: 11px !important;
+  margin: 2px !important;
+}
+
+
+/* ─────────────────────────────────────────────
+   6. POST META (date, category)
+   ───────────────────────────────────────────── */
+.post-meta,
+.post-meta i,
+.post-meta span,
+.post-meta a {
+  font-size: 11.5px !important;
+  color: var(--text-faint) !important;
+}
+
+.post-meta a:hover {
+  color: var(--c-accent) !important;
+}
+
+
+/* ─────────────────────────────────────────────
+   7. RIGHT PANEL (recently updated, trending)
+   ───────────────────────────────────────────── */
+#panel-wrapper {
+  background: var(--card-bg) !important;
+  border: 0.5px solid var(--card-border) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 16px !important;
+}
+
+#panel-wrapper h3,
+#panel-wrapper .panel-heading {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-faint) !important;
+  margin-bottom: 10px;
+}
+
+/* Recently updated list items */
+#recently-updated li,
+#panel-wrapper ul li {
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  padding: 4px 0 4px 10px;
+  border-left: 2px solid var(--card-border);
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+#recently-updated a,
+#panel-wrapper ul li a {
+  color: var(--text-muted) !important;
+  text-decoration: none;
+}
+
+#recently-updated a:hover,
+#panel-wrapper ul li a:hover {
+  color: var(--c-accent) !important;
+}
+
+
+/* ─────────────────────────────────────────────
+   8. PAGINATION
+   ───────────────────────────────────────────── */
+.pagination .page-item .page-link {
+  background: var(--card-bg) !important;
+  border: 0.5px solid var(--card-border) !important;
+  color: var(--text-muted) !important;
+  border-radius: var(--radius-sm) !important;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination .page-item.active .page-link {
+  background: var(--c-accent-soft) !important;
+  color: var(--c-accent-text) !important;
+  border-color: transparent !important;
+  font-weight: 600;
+}
+
+.pagination .page-item .page-link:hover {
+  border-color: var(--c-accent) !important;
+  color: var(--c-accent) !important;
+}
+
+
+/* ─────────────────────────────────────────────
+   9. INDIVIDUAL POST PAGE
+   ───────────────────────────────────────────── */
+#post-wrapper,
+.post-content {
+  background: var(--card-bg) !important;
+  border: 0.5px solid var(--card-border) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: 32px 36px !important;
+}
+
+/* Post heading */
+#post-wrapper h1.post-title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+/* Inline code */
+code:not([class]) {
+  background: var(--tag-bg) !important;
+  color: var(--c-pink) !important;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.88em;
+}
+
+/* Code blocks */
+.highlight, pre {
+  border-radius: var(--radius-md) !important;
+  border: 0.5px solid var(--card-border) !important;
+}
+
+
+/* ─────────────────────────────────────────────
+   10. TOPBAR (if visible on mobile)
+   ───────────────────────────────────────────── */
+#topbar-wrapper {
+  background: var(--sidebar-bg) !important;
+  border-bottom: 0.5px solid var(--sidebar-border) !important;
+  box-shadow: none !important;
+}
+
+@import "chirpy-custom";

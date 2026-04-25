@@ -1,7 +1,13 @@
 ---
 ---
 
-@import "jekyll-theme-chirpy";
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
 
 /* =====================================================================
    CUSTOM OVERRIDES — Alex Weru Portfolio

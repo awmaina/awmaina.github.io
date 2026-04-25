@@ -11,112 +11,102 @@
 
 /* =====================================================================
    CUSTOM OVERRIDES — Alex Weru Portfolio
-   File location: assets/css/jekyll-theme-chirpy.scss
-   This file MUST have the triple-dashed front matter above to be
-   processed by Jekyll. Do not remove those dashes.
    ===================================================================== */
 
 /* ── 1. DESIGN TOKENS ──────────────────────────────────────────────── */
 :root {
-  --c-accent:       #378ADD;
-  --c-accent-soft:  #E6F1FB;
-  --c-accent-text:  #0C447C;
-
-  --c-pink:         #D4537E;
-  --c-amber:        #BA7517;
-  --c-teal:         #1D9E75;
-
-  --radius-sm:      6px;
-  --radius-md:      10px;
-  --radius-lg:      14px;
-
-  --sidebar-bg:     #ffffff;
-  --sidebar-border: rgba(0, 0, 0, 0.08);
-  --card-bg:        #ffffff;
-  --card-border:    rgba(0, 0, 0, 0.07);
-  --tag-bg:         #f3f4f6;
-  --tag-text:       #4b5563;
-  --body-bg:        #f5f5f3;
-  --text-primary:   #111827;
-  --text-muted:     #6b7280;
-  --text-faint:     #9ca3af;
+  --aw-accent:       #378ADD;
+  --aw-accent-soft:  #E6F1FB;
+  --aw-accent-text:  #0C447C;
+  --aw-pink:         #D4537E;
+  --aw-amber:        #BA7517;
+  --aw-teal:         #1D9E75;
+  --aw-radius-sm:    6px;
+  --aw-radius-md:    10px;
+  --aw-radius-lg:    14px;
+  --aw-sidebar-bg:   #ffffff;
+  --aw-card-bg:      #ffffff;
+  --aw-card-border:  rgba(0,0,0,0.08);
+  --aw-tag-bg:       #f3f4f6;
+  --aw-tag-text:     #4b5563;
+  --aw-body-bg:      #f5f5f3;
+  --aw-text-muted:   #6b7280;
+  --aw-text-faint:   #9ca3af;
 }
 
 [data-mode="dark"] {
-  --c-accent-soft:  #0c2040;
-  --c-accent-text:  #7ab8ef;
-  --sidebar-bg:     #1a1a1f;
-  --sidebar-border: rgba(255, 255, 255, 0.07);
-  --card-bg:        #22222a;
-  --card-border:    rgba(255, 255, 255, 0.06);
-  --tag-bg:         #2a2a35;
-  --tag-text:       #a0a0b8;
-  --body-bg:        #16161c;
-  --text-primary:   #e8e8f0;
-  --text-muted:     #8888aa;
-  --text-faint:     #55556a;
+  --aw-accent-soft:  #0c2040;
+  --aw-accent-text:  #7ab8ef;
+  --aw-sidebar-bg:   #1e1e26;
+  --aw-card-bg:      #26262f;
+  --aw-card-border:  rgba(255,255,255,0.07);
+  --aw-tag-bg:       #2e2e3a;
+  --aw-tag-text:     #a0a0b8;
+  --aw-body-bg:      #18181f;
+  --aw-text-muted:   #8888aa;
+  --aw-text-faint:   #55556a;
 }
 
 
 /* ── 2. PAGE BACKGROUND ─────────────────────────────────────────────── */
 body {
-  background-color: var(--body-bg) !important;
+  background-color: var(--aw-body-bg) !important;
 }
 
 
 /* ── 3. SIDEBAR ─────────────────────────────────────────────────────── */
 #sidebar {
-  background: var(--sidebar-bg) !important;
-  border-right: 0.5px solid var(--sidebar-border) !important;
+  background: var(--aw-sidebar-bg) !important;
+  border-right: 0.5px solid var(--aw-card-border) !important;
   box-shadow: none !important;
 }
 
 #sidebar .site-title a,
 #sidebar .site-title {
-  color: var(--text-primary) !important;
+  color: var(--heading-color) !important;
   font-size: 15px !important;
   font-weight: 600 !important;
 }
 
 #sidebar .site-subtitle {
-  color: var(--text-muted) !important;
+  color: var(--aw-text-muted) !important;
   font-size: 11.5px !important;
   line-height: 1.6;
 }
 
 #sidebar .nav-link {
-  color: var(--text-muted) !important;
+  color: var(--aw-text-muted) !important;
   font-size: 13px !important;
-  border-radius: var(--radius-sm) !important;
+  border-radius: var(--aw-radius-sm) !important;
   transition: background 0.15s, color 0.15s;
 }
 
 #sidebar .nav-link:hover {
-  background: var(--tag-bg) !important;
-  color: var(--text-primary) !important;
+  background: var(--aw-tag-bg) !important;
+  color: var(--heading-color) !important;
 }
 
 #sidebar .nav-link.active {
-  background: var(--c-accent-soft) !important;
-  color: var(--c-accent-text) !important;
+  background: var(--aw-accent-soft) !important;
+  color: var(--aw-accent-text) !important;
   font-weight: 500 !important;
 }
 
 #sidebar .sidebar-bottom a {
-  color: var(--text-faint) !important;
+  color: var(--aw-text-faint) !important;
   transition: color 0.15s;
 }
 
 #sidebar .sidebar-bottom a:hover {
-  color: var(--c-accent) !important;
+  color: var(--aw-accent) !important;
 }
 
 
 /* ── 4. POST CARDS (home feed) ──────────────────────────────────────── */
 .card-wrapper {
-  background: var(--card-bg) !important;
-  border: 0.5px solid var(--card-border) !important;
-  border-radius: var(--radius-lg) !important;
+  background: var(--aw-card-bg) !important;
+  border: 0.5px solid var(--aw-card-border) !important;
+  border-radius: var(--aw-radius-lg) !important;
   box-shadow: none !important;
   overflow: hidden;
   position: relative;
@@ -137,10 +127,10 @@ body {
   border-radius: 3px 0 0 3px;
 }
 
-.card-wrapper:nth-child(4n+1)::before { background: var(--c-pink); }
-.card-wrapper:nth-child(4n+2)::before { background: var(--c-amber); }
-.card-wrapper:nth-child(4n+3)::before { background: var(--c-teal); }
-.card-wrapper:nth-child(4n+0)::before { background: var(--c-accent); }
+.card-wrapper:nth-child(4n+1)::before { background: var(--aw-pink); }
+.card-wrapper:nth-child(4n+2)::before { background: var(--aw-amber); }
+.card-wrapper:nth-child(4n+3)::before { background: var(--aw-teal); }
+.card-wrapper:nth-child(4n+0)::before { background: var(--aw-accent); }
 
 /* Hide the large colour thumbnail panels */
 .card-wrapper .preview-img,
@@ -154,14 +144,14 @@ img.preview-img {
 .post-preview .card-title {
   font-size: 14px !important;
   font-weight: 600 !important;
-  color: var(--text-primary) !important;
+  color: var(--heading-color) !important;
 }
 
 /* Card excerpt */
 .card-wrapper .card-text,
 .post-preview .card-text {
   font-size: 12.5px !important;
-  color: var(--text-muted) !important;
+  color: var(--aw-text-muted) !important;
   line-height: 1.55;
 }
 
@@ -172,11 +162,11 @@ img.preview-img {
 .post-meta span,
 .post-meta a {
   font-size: 11.5px !important;
-  color: var(--text-faint) !important;
+  color: var(--aw-text-faint) !important;
 }
 
 .post-meta a:hover {
-  color: var(--c-accent) !important;
+  color: var(--aw-accent) !important;
 }
 
 
@@ -184,10 +174,10 @@ img.preview-img {
 .post-tag,
 a.post-tag,
 .btn.btn-outline-primary.btn-sm {
-  background: var(--tag-bg) !important;
-  color: var(--tag-text) !important;
+  background: var(--aw-tag-bg) !important;
+  color: var(--aw-tag-text) !important;
   border: none !important;
-  border-radius: var(--radius-sm) !important;
+  border-radius: var(--aw-radius-sm) !important;
   font-size: 10.5px !important;
   font-weight: 500 !important;
   padding: 2px 8px !important;
@@ -196,16 +186,16 @@ a.post-tag,
 
 a.post-tag:hover,
 .btn.btn-outline-primary.btn-sm:hover {
-  background: var(--c-accent-soft) !important;
-  color: var(--c-accent-text) !important;
+  background: var(--aw-accent-soft) !important;
+  color: var(--aw-accent-text) !important;
 }
 
 
 /* ── 7. RIGHT PANEL ─────────────────────────────────────────────────── */
 #panel-wrapper {
-  background: var(--card-bg) !important;
-  border: 0.5px solid var(--card-border) !important;
-  border-radius: var(--radius-lg) !important;
+  background: var(--aw-card-bg) !important;
+  border: 0.5px solid var(--aw-card-border) !important;
+  border-radius: var(--aw-radius-lg) !important;
   padding: 16px !important;
 }
 
@@ -214,78 +204,78 @@ a.post-tag:hover,
   font-weight: 600 !important;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: var(--text-faint) !important;
+  color: var(--aw-text-faint) !important;
   margin-bottom: 10px;
 }
 
 #panel-wrapper ul li {
   font-size: 12px !important;
-  color: var(--text-muted) !important;
+  color: var(--aw-text-muted) !important;
   padding: 4px 0 4px 10px;
-  border-left: 2px solid var(--card-border);
+  border-left: 2px solid var(--aw-card-border);
   margin-bottom: 6px;
   line-height: 1.45;
 }
 
 #panel-wrapper ul li a {
-  color: var(--text-muted) !important;
+  color: var(--aw-text-muted) !important;
   text-decoration: none;
 }
 
 #panel-wrapper ul li a:hover {
-  color: var(--c-accent) !important;
+  color: var(--aw-accent) !important;
 }
 
 
 /* ── 8. PAGINATION ──────────────────────────────────────────────────── */
 .pagination .page-item .page-link {
-  background: var(--card-bg) !important;
-  border: 0.5px solid var(--card-border) !important;
-  color: var(--text-muted) !important;
-  border-radius: var(--radius-sm) !important;
+  background: var(--aw-card-bg) !important;
+  border: 0.5px solid var(--aw-card-border) !important;
+  color: var(--aw-text-muted) !important;
+  border-radius: var(--aw-radius-sm) !important;
   font-size: 12px;
 }
 
 .pagination .page-item.active .page-link {
-  background: var(--c-accent-soft) !important;
-  color: var(--c-accent-text) !important;
+  background: var(--aw-accent-soft) !important;
+  color: var(--aw-accent-text) !important;
   border-color: transparent !important;
   font-weight: 600;
 }
 
 .pagination .page-item .page-link:hover {
-  border-color: var(--c-accent) !important;
-  color: var(--c-accent) !important;
+  border-color: var(--aw-accent) !important;
+  color: var(--aw-accent) !important;
 }
 
 
 /* ── 9. INDIVIDUAL POST PAGE ────────────────────────────────────────── */
 #post-wrapper {
-  background: var(--card-bg) !important;
-  border: 0.5px solid var(--card-border) !important;
-  border-radius: var(--radius-lg) !important;
+  background: var(--aw-card-bg) !important;
+  border: 0.5px solid var(--aw-card-border) !important;
+  border-radius: var(--aw-radius-lg) !important;
   padding: 32px 36px !important;
 }
 
 h1.post-title {
   font-size: 22px !important;
   font-weight: 700 !important;
-  color: var(--text-primary) !important;
+  color: var(--heading-color) !important;
   letter-spacing: -0.02em;
   line-height: 1.3;
 }
 
 code:not([class]) {
-  background: var(--tag-bg) !important;
-  color: var(--c-pink) !important;
+  background: var(--aw-tag-bg) !important;
+  color: var(--aw-pink) !important;
   border-radius: 4px;
   padding: 1px 5px;
   font-size: 0.88em;
 }
 
 .highlight, pre {
-  border-radius: var(--radius-md) !important;
-  border: 0.5px solid var(--card-border) !important;
+  border-radius: var(--aw-radius-md) !important;
+  border: 0.5px solid var(--aw-card-border) !important;
 }
 
 

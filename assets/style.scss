@@ -1,13 +1,7 @@
 ---
 ---
 
-
-/* prettier-ignore */
-@use 'main
-{%- if jekyll.environment == 'production' -%}
-  .bundle
-{%- endif -%}
-';
+@import "main";
 
 /* =====================================================================
    CUSTOM OVERRIDES — Alex Weru Portfolio

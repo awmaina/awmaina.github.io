@@ -2,7 +2,8 @@
 icon: fas fa-info-circle
 order: 1
 ---
-{% include embed/video.html src='/assets/video/output.mp4' title='Video Title' %}
+
+{% include embed/video.html src='/assets/video/output.mp4' title='Alex Weru — Cybersecurity Portfolio' %}
 
 ## Hello World — I'm Alex Weru
 

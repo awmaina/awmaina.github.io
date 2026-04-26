@@ -1,26 +1,35 @@
 ---
-
 icon: fas fa-info-circle
 order: 1
 ---
 
+## Hello World — I'm Alex Weru
 
-## 👋 Hello World! I'm Alex Maina Weru
+I'm a **cybersecurity practitioner** based in Nairobi, Kenya, currently completing a BSc in Applied Computing (Information Security & Forensics) at KCA University. I hold an Ethical Hacking certification from USIU-Africa and have hands-on experience implementing cybersecurity controls, managing IT systems, and documenting real-world security scenarios through this portfolio.
 
-I'm a passionate **Cybersecurity Enthusiast** and an adaptable professional dedicated to securing digital environments. My journey in technology spans from hands-on **Network Administration** to advanced concepts in **Information Security & Forensics**.
+My practice spans both sides of the security equation:
 
-I leverage a dual approach to digital defense:
-* 🛡️ **Defensive Security:** As a **Junior SOC Analyst**, I specialize in monitoring, threat detection, incident response, and ensuring system compliance.
-* ⚔️ **Offensive Security:** As a **Pentester**, I actively seek out vulnerabilities in networks and applications to provide actionable insights for hardening security posture.
+**Defensive Security (Blue Team)**
+As a Junior SOC Analyst, I focus on threat detection, log analysis, incident response, and security monitoring — working with frameworks like MITRE ATT&CK to understand and respond to adversary behaviour.
 
-I believe in continuous learning in the fast-paced world of cybersecurity and am committed to building robust, secure, and resilient infrastructure.
+**Offensive Security (Red Team)**
+As a Pentester, I identify vulnerabilities in networks and applications through structured assessments — from enumeration and exploitation to privilege escalation and post-exploitation analysis, documented across CTF and lab environments including Hack The Box.
 
-### 🔗 Connect With Me
+---
 
-You can find more about my professional work and projects here:
+### What You'll Find Here
 
-* [**GitHub**](https://github.com/awmaina)
-* [**LinkedIn**](https://www.linkedin.com/in/alexmainaweru)
-* [**Email**](mailto:mainaweru2023@gmail.com)
+This site is a living record of my technical growth — not a curated highlight reel, but an honest log of labs, investigations, and write-ups across four domains:
 
-Let's connect and discuss the latest in digital security!
+- **Threat Intelligence** — malware analysis, IOC hunting, RAT profiling
+- **Network Forensics** — PCAP analysis, lateral movement detection, credential attacks
+- **Endpoint & Mobile Forensics** — Android artefact extraction, timeline analysis
+- **Penetration Testing** — machine walkthroughs, exploit chains, privilege escalation
+
+---
+
+### Let's Connect
+
+- [GitHub](https://github.com/awmaina)
+- [LinkedIn](https://www.linkedin.com/in/alexmainaweru)
+- [Email](mailto:mainaweru2023@gmail.com)

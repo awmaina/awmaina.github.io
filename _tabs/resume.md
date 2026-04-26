@@ -1,5 +1,5 @@
 ---
-layout: resume
+layout: post
 icon: fas fa-id-card
 order: 5
 ---

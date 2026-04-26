@@ -2,6 +2,7 @@
 icon: fas fa-info-circle
 order: 1
 ---
+{% include embed/video.html src='/assets/video/output.mp4' title='Video Title' %}
 
 ## Hello World — I'm Alex Weru
 

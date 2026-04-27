@@ -1,6 +1,5 @@
-
-<div class="video-container">
-  <video controls title="{{ include.title }}">
+<div style="max-width: 420px; margin: 0 auto 1.5rem auto; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+  <video controls style="width: 100%; display: block;" title="{{ include.title }}">
     <source src="{{ include.src | relative_url }}" type="video/mp4">
     Your browser does not support the video tag.
   </video>

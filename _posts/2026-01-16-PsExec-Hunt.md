@@ -3,7 +3,7 @@ layout: post
 title: " PsExec Hunt"
 author: Alex Maina Weru
 date: 2026-01-16
-categories: [Lab and CTF challenges, Network Forensics]
+categories: [Lab and CTF challenges, Network Forensic]
 tags: [SMB, PsExec, NTLM, Wireshark, SOC, MITRE ATT&CK]
 image:
   path: /assets/ps/ps8.webp

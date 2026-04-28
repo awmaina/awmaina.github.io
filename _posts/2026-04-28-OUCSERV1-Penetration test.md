@@ -6,7 +6,7 @@ date: 2026-04-28
 categories: [Jobs, oucserv1 pentest]
 tags: [Dirty cow, FreeBSD, Metasploit, Buffer Overflow, Pentesting]
 image:
-  path: assets/kiop/kiop5.jpeg
+  path: assets/ouc/oucserv.svg
   alt: kioptrix
 ---
 # OUCSERV1 — Penetration Testing & SOC Assessment

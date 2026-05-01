@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: post
 title: "Understanding the Threat Landscape"
 author: Alex Maina Weru
 date: 2026-05-01

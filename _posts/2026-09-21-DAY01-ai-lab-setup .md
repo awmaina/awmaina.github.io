@@ -36,6 +36,9 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 pip install requests python-dotenv
 ```
+
+![] (/assets/phish/ai1.png)
+
 * **Telemetry Check:** `pip` successfully upgraded to `26.2.1`. Foundation packages `requests` (for model API interfacing) and `python-dotenv` (for secure runtime credential handling) were installed without errors.
 
 ### 3. Hypervisor & Containerization Verification
@@ -48,6 +51,8 @@ docker --version
 # Deploying an isolated verification container
 docker run hello-world
 ```
+![] (/assets/phish/ai2.png)
+
 * **Telemetry Check:** The engine successfully mapped to the remote Docker Hub registry, verified a localized image miss, pulled down layers securely, stream-executed the internal binary payload, and severed runtime persistence instantly.
 
 ---

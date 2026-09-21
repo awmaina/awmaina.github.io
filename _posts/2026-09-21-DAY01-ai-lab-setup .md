@@ -3,7 +3,7 @@ layout: post
 title: "Building an Isolated AI Security Lab & Infrastructure Triage"
 author: Alex Maina Weru
 date: 2026-09-21
-categories: [ai-defender]
+categories: [ai-defender, day 1]
 tags: [lab, triage, ai, defense]
 image:
     path: /assets/cap/cap10.png

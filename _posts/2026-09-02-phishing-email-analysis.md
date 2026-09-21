@@ -6,8 +6,8 @@ date: 2026-09-02
 categories: [Lab and CTF challenges, SOC]
 tags: [HTB, phishing, Email, headers]
 image:
-    path: /assets/cap/cap10.png
-    alt: cap
+    path: /assets/phish/phish.jpg
+    alt: phishing
 ---
 
 

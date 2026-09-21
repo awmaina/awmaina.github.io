@@ -6,11 +6,11 @@ date: 2026-09-21
 categories: [ai-defender, day 1]
 tags: [lab, triage, ai, defense]
 image:
-    path: /assets/cap/cap10.png
-    alt: cap
+    path: /assets/phish/ai.jpg
+    alt: ai
 ---
 
-# 🛡️ Day 01: Building an Isolated AI Security Lab & Infrastructure Triage
+> 🛡️ Day 01: Building an Isolated AI Security Lab & Infrastructure Triage
 
 ## 📝 Executive Summary
 On Day 1 of my 30-day journey into AI-Driven Threats & Defenses, I successfully built and triaged an isolated local security engineering workspace. As a modern cyber defender, relying on global system dependencies is an unacceptable security risk. This lab establishes a clean baseline to analyze LLM vulnerabilities, write behavioral detection rules, and configure autonomous orchestration playbooks safely.

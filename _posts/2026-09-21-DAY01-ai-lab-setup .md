@@ -51,7 +51,7 @@ docker --version
 # Deploying an isolated verification container
 docker run hello-world
 ```
-![] (assets/phish/ai2.png)
+![](assets/phish/ai2.png)
 
 * **Telemetry Check:** The engine successfully mapped to the remote Docker Hub registry, verified a localized image miss, pulled down layers securely, stream-executed the internal binary payload, and severed runtime persistence instantly.
 

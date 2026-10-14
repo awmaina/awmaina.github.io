@@ -11,7 +11,11 @@ order: 6
   
   ![](assets/kali1.png)
 
+
+* **Ethical Hacker** (2025)
   
+  ![](assets/kali1.png)
+
 * **Cisco Endpoint Security**(2025)
 
   ![](assets/cert1.png)  

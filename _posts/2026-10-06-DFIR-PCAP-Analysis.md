@@ -6,7 +6,7 @@ date: 2026-10-06
 categories: [DFIR Fundamentals, PCAP Analysis]
 tags: [DFIR, Threat, Management]
 image:
-  path: assets/threat/threat.svg
+  path: assets/pcap/p18.png
   alt: threat
 ---
 

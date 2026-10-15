@@ -6,12 +6,12 @@ date: 2026-10-06
 categories: [DFIR Fundamentals, Splunk Analysis]
 tags: [DFIR, Threat, splunk]
 image:
-  path: assets/pcap/p18.png
+  path: assets/pcap/s16.png
   alt: threat
 ---
 
 
-**Portfolio case study · Blue-team DFIR · Splunk Enterprise**  
+**DFIR case study · Blue-team DFIR · Splunk Enterprise**  
 **Environment:** Training dataset / simulated Windows incident  
 **Prepared by:** Alex Maina Weru
 

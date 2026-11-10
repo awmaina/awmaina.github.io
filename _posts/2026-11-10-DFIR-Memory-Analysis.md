@@ -54,7 +54,7 @@ Before any hunting I confirmed what I was looking at. Volatility needs the right
 python3 vol.py -vvv -f /home/blacklink/Desktop/dfir/memdump.mem windows.info
 ```
 
-![windows.info output](images/01-windows-info.png)
+![windows.info output](/assets/phish/m2.png)
 
 Key facts:
 
@@ -83,7 +83,7 @@ grep -E -o "([0-9]{1,3}\.){3}[0-9]{1,3}" strings.txt > strings_ipv4.txt
 grep -E -i "powershell|enc|bypass|nop" strings.txt > string_powershell.txt
 ```
 
-![Batch collection script](images/02-collection-script.png)
+![Batch collection script](/assets/phish/m3.png)
 
 ## Step 3: Process review
 
@@ -91,11 +91,11 @@ grep -E -i "powershell|enc|bypass|nop" strings.txt > string_powershell.txt
 
 The host booted around **22:38 UTC**, and the first batch of processes looks like a normal Windows start-up: `System`, `smss.exe`, `csrss.exe`, `wininit.exe`, `services.exe`, `lsass.exe` and a crowd of `svchost.exe`. Also present are `splunkd.exe` and `Sysmon64.exe`, so this box was instrumented.
 
-![pslist, boot-time processes](images/03-pslist-boot.png)
+![pslist, boot-time processes](/assets/phish/m4.png)
 
 The interesting part is the end of the list, where later activity shows up:
 
-![pslist, later processes](images/04-pslist-late.png)
+![pslist, later processes](/assets/phish/m5.png)
 
 Things that caught my eye:
 
@@ -109,7 +109,7 @@ Things that caught my eye:
 
 The tree view shows parent/child relationships, and with the extra `Audit`, `Cmd` and `Path` columns, you can check each process against the path it *should* run from.
 
-![pstree with command lines and paths](images/05-pstree.png)
+![pstree with command lines and paths](/assets/phish/m6.png)
 
 `windows.cmdline` answers "which process ran with which arguments":
 
@@ -117,7 +117,7 @@ The tree view shows parent/child relationships, and with the extra `Audit`, `Cmd
 python3 vol.py -f ../memdump.mem windows.cmdline > cmdline.txt
 ```
 
-![cmdline output](images/06-cmdline.png)
+![cmdline output](/assets/phish/m7.png)
 
 Everything here matched expected system paths (`svchost.exe -k <group> -p` from `System32`, Firefox from `Program Files (x86)`, and so on). No obviously masquerading binary jumped out, so the PowerShell evidence below came from strings rather than from the process list. It's a good reminder that **a clean process list doesn't mean a clean host**.
 
@@ -128,13 +128,13 @@ python3 vol.py -f ../memdump.mem windows.netscan > netscan.txt
 less netscan.txt | grep ESTABLISHED
 ```
 
-![netscan output](images/07-netscan.png)
+![netscan output](/assets/phish/m8.png)
 
 The host is `192.168.0.104`. Listening services of note: **3389 (RDP, svchost PID 1008)** and **5985 (WinRM, System)**.
 
 Filtering for established sessions:
 
-![Established connections](images/08-established.png)
+![Established connections](/assets/phish/m9.png)
 
 | Remote | Port | Read |
 |---|---|---|
@@ -150,7 +150,7 @@ Nothing screams "C2" in the table on its own, which is common. Connection state 
 
 `strings` on the whole image produces a huge, noisy file, and most of it is garbage (boot code, error messages and so on):
 
-![Raw strings output](images/09-strings-raw.png)
+![Raw strings output](/assets/phish/m10.png)
 
 So narrow it down. I started with PowerShell:
 
@@ -160,7 +160,7 @@ grep -i powershell strings.txt | less
 
 ### Finding 1: an encoded, hidden PowerShell command
 
-![Encoded PowerShell command line](images/1)
+![Encoded PowerShell command line](/assets/phish/m11.png)
 
 The highlighted line is a `ParentCommandLine`:
 
@@ -191,7 +191,7 @@ echo '<full base64 here>' | base64 -d | iconv -f UTF-16LE -t UTF-8
 
 Scrolling further through the PowerShell hits turned up this one:
 
-![Persistence evidence](images/11-powershell-persistence.png)
+![Persistence evidence](/assets/phish/m12.png)
 
 Cleaned up, the highlighted text shows a command that:
 
@@ -214,7 +214,7 @@ grep -E -o '([0-9]{1,3}\.){3}[0-9]{1,3}' strings.txt | sort | uniq | wc -l
 grep -e "3.140.33.120" strings.txt -B 5 -A 2 | less
 ```
 
-![Strings commands used](images/12-strings-commands.png)
+![Strings commands used](/assets/phish/m13.png)
 
 ## Timeline
 

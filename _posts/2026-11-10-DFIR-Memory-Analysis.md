@@ -46,6 +46,9 @@ The toolbox for this lab:
 | **strings** | Pulls printable character sequences out of unstructured data |
 | **bulk_extractor** | Scans binary files for patterns (IPs, emails, URLs) |
 
+
+![windows.info output](/assets/phish/m1.png)
+
 ## Step 1: Identify the system
 
 Before any hunting I confirmed what I was looking at. Volatility needs the right symbols, and the OS details anchor the timeline.

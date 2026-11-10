@@ -12,15 +12,9 @@ image:
 ---
 
 
-**DFIR case study · Blue-team DFIR · volatility3**  
-**Environment:** Training dataset / simulated incident  
-**Prepared by:** Alex Maina Weru
-
-
-
-
-# Memory Forensics with Volatility 3: Hunting a PowerShell Implant in a Windows RAM Dump
-
+> **DFIR case study · Blue-team DFIR · volatility3**  
+> **Environment:** Training dataset / simulated incident  
+> **Prepared by:** Alex Maina Weru
 > **Lab:** Memory Analysis, from the *DFIR Foundations: Techniques & Readiness* 
 > **Tools:** Volatility 3 (v2.28.3), `strings`, `grep`, `less`.
 > **Evidence:** `memdump.mem`, a full RAM capture of a Windows host.

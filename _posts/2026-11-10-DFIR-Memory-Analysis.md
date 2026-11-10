@@ -7,7 +7,7 @@ date: 2026-11-10
 categories: [DFIR Fundamentals, Memory Analysis]
 tags: [dfir, memory-forensics, volatility3, windows, powershell, blue-team]
 image:
-  path: assets/pcap/s16.png
+  path: assets/phish/mem.png
   alt: threat
 ---
 
